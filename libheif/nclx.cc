@@ -294,8 +294,8 @@ struct heif_color_profile_nclx* color_profile_nclx::alloc_nclx_color_profile()
 
   if (profile) {
     profile->version = 1;
-    profile->color_primaries = heif_color_primaries_unspecified;
-    profile->transfer_characteristics = heif_transfer_characteristic_unspecified;
+    profile->color_primaries = heif_color_primaries_ITU_R_BT_601_6;
+    profile->transfer_characteristics = heif_transfer_characteristic_ITU_R_BT_601_6;
     profile->matrix_coefficients = heif_matrix_coefficients_ITU_R_BT_601_6;
     profile->full_range_flag = true;
   }
@@ -312,8 +312,8 @@ void color_profile_nclx::free_nclx_color_profile(struct heif_color_profile_nclx*
 
 void color_profile_nclx::set_default()
 {
-  m_colour_primaries = 2;
-  m_transfer_characteristics = 2;
+  m_colour_primaries = 6;
+  m_transfer_characteristics = 6;
   m_matrix_coefficients = 6;
   m_full_range_flag = true;
 }
