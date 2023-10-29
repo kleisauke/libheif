@@ -2465,6 +2465,7 @@ Error HeifContext::encode_image_as_hevc(const std::shared_ptr<HeifPixelImage>& i
     if (!src_image) {
       return Error(heif_error_Unsupported_feature, heif_suberror_Unsupported_color_conversion);
     }
+    *target_nclx_profile = *src_image->get_color_profile_nclx();
   }
   else {
     src_image = image;
@@ -2673,6 +2674,7 @@ Error HeifContext::encode_image_as_av1(const std::shared_ptr<HeifPixelImage>& im
     if (!src_image) {
       return Error(heif_error_Unsupported_feature, heif_suberror_Unsupported_color_conversion);
     }
+    *target_nclx_profile = *src_image->get_color_profile_nclx();
   }
   else {
     src_image = image;
@@ -2848,6 +2850,7 @@ Error HeifContext::encode_image_as_jpeg2000(const std::shared_ptr<HeifPixelImage
     if (!src_image) {
       return Error(heif_error_Unsupported_feature, heif_suberror_Unsupported_color_conversion);
     }
+    *target_nclx_profile = *src_image->get_color_profile_nclx();
   }
   else {
     src_image = image;
@@ -2961,6 +2964,7 @@ Error HeifContext::encode_image_as_jpeg(const std::shared_ptr<HeifPixelImage>& i
     if (!src_image) {
       return Error(heif_error_Unsupported_feature, heif_suberror_Unsupported_color_conversion);
     }
+    *target_nclx_profile = *src_image->get_color_profile_nclx();
   }
   else {
     src_image = image;
