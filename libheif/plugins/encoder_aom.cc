@@ -1009,6 +1009,9 @@ struct heif_error aom_encode_image(void* encoder_raw, const struct heif_image* i
   }
 #endif
 
+  // Always disable the IntraBC mode, as it's too slow.
+  aom_codec_control(&codec, AV1E_SET_ENABLE_INTRABC, 0);
+
 #if defined(HAVE_AOM_CODEC_SET_OPTION)
   // Apply the custom AOM encoder options.
   // These should always be applied last as they can override the values that were set above.
