@@ -2,7 +2,7 @@ name: mingw
 
 on:
   push:
-    branches: [ master mingw-ci-test ]
+    branches: [ master, mingw-ci-test ]
   pull_request:
     branches: [ master ]
 
