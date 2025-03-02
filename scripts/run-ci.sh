@@ -69,14 +69,14 @@ if [ "$MINGW" == "32" ]; then
     # Make sure the correct compiler will be used.
     unset CC
     unset CXX
-    BIN_SUFFIX=.exe
+    BIN_SUFFIX=
     BIN_WRAPPER=wine
     export WINEPATH="/usr/lib/gcc/i686-w64-mingw32/9.3-posix/;/usr/i686-w64-mingw32/lib"
 elif [ "$MINGW" == "64" ]; then
     # Make sure the correct compiler will be used.
     unset CC
     unset CXX
-    BIN_SUFFIX=.exe
+    BIN_SUFFIX=
     BIN_WRAPPER=wine64
     export WINEPATH="/usr/lib/gcc/x86_64-w64-mingw32/9.3-posix/;/usr/x86_64-w64-mingw32/lib"
 fi
