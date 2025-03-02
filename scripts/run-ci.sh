@@ -164,6 +164,7 @@ if [ -z "$EMSCRIPTEN_VERSION" ] && [ -z "$CHECK_LICENSES" ] && [ -z "$TARBALL" ]
     if [ -z "$FUZZER" ] ; then
 	echo "List available encoders"
 	ls -l ./examples
+	file ./examples/heif-enc
         ${BIN_WRAPPER} ./examples/heif-enc${BIN_SUFFIX} --list-encoders
 
 	echo "List available decoders"
