@@ -127,6 +127,7 @@ if [ "$MINGW" == "32" ]; then
         gcc-mingw-w64-i686 \
         mingw-w64-i686-dev \
         libz-mingw-w64-dev \
+        libz-mingw-w64 \
         wine-stable \
         wine32 \
         "
@@ -137,6 +138,7 @@ elif [ "$MINGW" == "64" ]; then
         gcc-mingw-w64-x86-64 \
         mingw-w64-x86-64-dev \
         libz-mingw-w64-dev \
+        libz-mingw-w64 \
         wine-stable \
         "
 fi
